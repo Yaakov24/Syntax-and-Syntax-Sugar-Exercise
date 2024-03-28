@@ -4,12 +4,14 @@
     {
         static void Main(string[] args)
         {
-            var answer = 20;
+            
+            Console.WriteLine("Whats your favorite number?");
+          var response = int.Parse(Console.ReadLine());
+            
+             var answer = (response < 9) ? $"{response} is less than nine\n" :
+                $"{response} is greater than or equal to nine";
 
-            var response = (answer < 9) ? $"{answer} is less than nine\n" :
-                $"{answer} is greater than or equal to nine";
-
-            Console.WriteLine(response);
+            Console.WriteLine(answer);
         }
     }
 }
